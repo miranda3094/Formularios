@@ -49,15 +49,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         //validacion para correo electronico
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (emailInput.value.trim() === '') {
-            mostrarError(errorEmail, emailInput, 'El correo es requerido');
+            mostrarError(errorEmail, emailInput,'El correo es requerido');
             formValido = false;
         } else if (emailPattern.test(emailInput.value.trim())){
-            mostrarError(errorEmail,emailInput, 'Ingrese un correo valido');
+            mostrarError(errorEmail,emailInput,'Ingrese un correo valido');
             formValido = false;
         }
         //validacion de la contraseña
         if (passwordInput.value.trim() === '') {
-            mostrarError(errorPassword, passwordInput, 'La contraseña es requerida');
+            mostrarError(errorPassword, passwordInput,'La contraseña es requerida');
             formValido = false;
         } else if (passwordInput.value.trim().length < 6) {
             mostrarError(errorPassword,passwordInput,'La contraseña debe de ser mayor a 6 caracteres');
